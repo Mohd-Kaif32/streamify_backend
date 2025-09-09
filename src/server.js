@@ -13,7 +13,6 @@ import { connectDB } from "./lib/db.js";
 const app = express();
 const PORT = process.env.PORT;
 
-const __dirname = path.resolve();
 
 app.use(
   cors({
@@ -21,6 +20,7 @@ app.use(
     credentials: true,
   })
 );
+console.log("hello " ,process.env.CLIENT_URL)
 
 app.use(express.json());
 app.use(cookieParser());
